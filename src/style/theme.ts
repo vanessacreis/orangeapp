@@ -7,6 +7,7 @@ export const light = {
   tertiary: "#FCCC9B",
   text: "#222326",
   background: "#fcfcfc",
+  fontTitle: "'Rubik', sans-serif;",
   font: "'Roboto', sans-serif",
 };
 
