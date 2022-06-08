@@ -24,6 +24,7 @@ export const Login = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: ${light.text};
 
   > h1 {
     font-size: 4.2rem;
@@ -36,5 +37,16 @@ export const Login = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+  }
+
+  p,
+  a {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  a {
+    font-weight: bolder;
+    color: ${light.primary};
   }
 `;
