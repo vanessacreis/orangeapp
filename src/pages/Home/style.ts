@@ -4,7 +4,7 @@ import { light } from "../../style/theme";
 export const Container = styled.main`
   min-height: calc(100vh - 7.5rem);
   font-family: ${light.font};
-  background: ${light.background};
+  background: transparent;
 
   .orange {
     color: ${light.primary};
