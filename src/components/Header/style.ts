@@ -8,6 +8,8 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding-inline: 2.5rem;
+  /* position: absolute;
+  z-index: 2; */
 
   a {
     cursor: pointer;
