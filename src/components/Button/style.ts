@@ -18,9 +18,9 @@ export const Button = styled.button`
   }
 
   &.large {
-    height: 4.5rem;
-    width: 20rem;
+    height: 4rem;
+    width: 35rem;
     border: none;
-    border-radius: 2.5rem;
+    border-radius: 1rem;
   }
 `;
