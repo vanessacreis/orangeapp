@@ -1,9 +1,18 @@
-export type Appointment = {
+export type TAppointment = {
   id: number;
-  idUser: number;
+  uuid: string;
   title: string;
   description: string;
-  createdAt: Date;
-  startTime: Date;
-  endTime: Date;
+  createdAt: string;
+  startTime: string;
+  endTime: string;
+};
+
+export type TUser = {
+  uuid: string;
+  id: string;
+  password: string;
+  email: string;
+  name: string;
+  avatar: string;
 };
