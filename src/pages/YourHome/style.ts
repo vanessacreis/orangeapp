@@ -8,7 +8,7 @@ export const Container = styled.main`
 `;
 
 export const Today = styled.section`
-  height: 100%;
+  padding-top: 2.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const Today = styled.section`
 
 export const Schedules = styled.section`
   flex: 1;
-  /* background-color: blue; */
+  padding-top: 2.5rem;
 
   > h2 {
     color: ${light.primary};
@@ -39,4 +39,5 @@ export const CardList = styled.div`
   flex-direction: column;
   gap: 2rem;
   margin-top: 4rem;
+  overflow-y: auto;
 `;
