@@ -4,7 +4,9 @@ export type TAppointment = {
   title: string;
   description: string;
   createdAt: string;
+  startDay: string;
   startTime: string;
+  endDay: string;
   endTime: string;
 };
 
