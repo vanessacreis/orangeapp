@@ -8,8 +8,6 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding-inline: 2.5rem;
-  /* position: absolute;
-  z-index: 2; */
 
   a {
     cursor: pointer;
@@ -21,7 +19,11 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  padding-inline: 3rem;
 
   .nav_link {
     color: ${light.text};
@@ -29,11 +31,54 @@ export const Nav = styled.nav`
     text-transform: uppercase;
 
     &.active {
+      font-weight: bold;
       color: ${light.primary};
     }
 
     &:hover {
       color: ${light.primary};
+    }
+  }
+
+  .nav_link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: ${light.primary};
+    display: block;
+    position: relative;
+    bottom: -1rem;
+    left: -0.5rem;
+    transition: width 0.2s;
+  }
+
+  .nav_link:hover::after,
+  .nav_link.active::after {
+    width: 100%;
+    padding-inline: 0.8rem;
+  }
+`;
+
+export const User = styled.div`
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    > h3 {
+      font-family: ${light.fontTitle};
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-right: 1rem;
+    }
+    > img {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 100rem;
     }
   }
 `;
