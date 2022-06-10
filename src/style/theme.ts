@@ -6,6 +6,7 @@ export const light = {
   primary: "#F25D27",
   secundary: "#F2A922",
   tertiary: "#FCCC9B",
+  modal: "#F5E4D0",
   text: "#222326",
   background: "#fcfcfc",
   fontTitle: "'Rubik', sans-serif;",
