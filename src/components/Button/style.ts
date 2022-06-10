@@ -8,11 +8,11 @@ export const Button = styled.button`
   letter-spacing: 0.1rem;
   font-family: ${light.text};
   cursor: pointer;
-  box-shadow: 0 2px 10px ${light.black};
+  box-shadow: 0 2px 10px ${light.black}80;
 
   &.circle {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 5rem;
+    height: 5rem;
     border: none;
     border-radius: 2.5rem;
   }
