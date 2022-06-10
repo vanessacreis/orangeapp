@@ -10,6 +10,7 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   padding-inline: 2rem;
+  margin-top: 2rem;
 
   > img {
     width: 15rem;
