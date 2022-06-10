@@ -12,7 +12,7 @@ export const Container = styled.main`
 `;
 
 export const Home = styled.section`
-  height: 100%;
+  height: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,14 +66,22 @@ export const Sobre = styled.section`
 
   .infoImg {
     width: 35rem;
-    filter: drop-shadow(2px 2px 5px ${light.gray}80);
+    filter: drop-shadow(2px 2px 10px ${light.gray}80);
   }
 
   .infoText {
-    width: 35rem;
+    width: 40rem;
     font-family: ${light.text};
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 300;
     text-align: center;
+
+    > a {
+      margin-top: 1rem;
+      color: ${light.primary};
+      font-family: ${light.text};
+      font-size: 2rem;
+      font-weight: 500;
+    }
   }
 `;
