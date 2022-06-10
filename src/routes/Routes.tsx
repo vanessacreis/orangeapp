@@ -10,6 +10,7 @@ import { GlobalStyle } from "../style/globalStyle";
 import PrivateRoute from "./PrivateRoute";
 import { ProviderAppointments } from "../hooks/useAppointments";
 import SignUp from "../pages/SignUp/SignUp";
+import Footer from "../components/Footer/Footer";
 
 function Routes() {
   return (
@@ -31,6 +32,7 @@ function Routes() {
           />
           <Route path="/*" element={<Error />} />
         </Switch>
+        <Footer />
       </ProviderAppointments>
     </BrowserRouter>
   );
