@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { isAuth } from "../routes/auth";
 import { api } from "../services/api";
 import { TAppointment, TAppointmentArray, TUser } from "../types/types";
+import { toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface IActions {
   handleCreateAppointment: (appointment: TAppointment) => void;
@@ -53,14 +55,37 @@ function useProviderAppointments(): IAppointmentsContext {
   async function handleCreateNewUser(data: TUser) {
     const body = {
       ...data,
-      avatar: "../assets/images/user.png",
+      avatar: "",
     };
     try {
-      const response = await api.post("/users", body);
-      isAuth();
-      handleLogin(body.id, body.password);
+      if (
+        body.id.length === 0 ||
+        body.name.length === 0 ||
+        body.password.length === 0 ||
+        body.email.length === 0
+      ) {
+        toast.error("Opa! Os campos não podem ser enviados vazios.😥", {
+          className: "toast",
+          draggable: false,
+          transition: Zoom,
+          autoClose: 4000,
+        });
+      } else {
+        const response = await api.post("/users", body);
+        isAuth();
+        handleLogin(body.id, body.password);
+      }
     } catch (error) {
-      console.log(error);
+      if (error) {
+        toast.error(
+          "Parece que estamos passando por uma pequena instabilidade. Por favor, tente mais tarde.",
+          {
+            className: "toast",
+            draggable: false,
+            transition: Zoom,
+          }
+        );
+      }
     }
   }
 
@@ -77,10 +102,24 @@ function useProviderAppointments(): IAppointmentsContext {
         navigate(`/yourhome/${id}`);
         handleGetAppointments(uuid);
       } else {
-        throw new Error("senha invalida!");
+        toast.error("Opa! 😥 Verifique sua senha e tente novamente.", {
+          className: "toast",
+          draggable: false,
+          transition: Zoom,
+          autoClose: 4000,
+        });
       }
     } catch (error) {
-      console.log(error);
+      if (error) {
+        toast.error(
+          "Parece que estamos passando por uma pequena instabilidade. Por favor, tente mais tarde.",
+          {
+            className: "toast",
+            draggable: false,
+            transition: Zoom,
+          }
+        );
+      }
     }
   }
 
@@ -101,19 +140,37 @@ function useProviderAppointments(): IAppointmentsContext {
       const response = await api.post("/appointments", body);
       if (response.status === 201) {
         navigate(`/yourhome/${user.id} `);
+        toast.success("Agendamento criado com sucesso! 😄", {
+          className: "toast",
+          draggable: false,
+          transition: Zoom,
+        });
       }
-      console.log(response);
     } catch (error) {
-      console.log(error);
+      toast.error("Opa, parece que algo deu errado. Tente novamente. 😥", {
+        className: "toast",
+        draggable: false,
+        transition: Zoom,
+        autoClose: 4000,
+      });
     }
   }
 
   async function handleDeleteAppointment(id?: number) {
     try {
       const response = await api.delete(`/appointments/${id}`);
-      console.log(response);
+      toast.success("Agendamento excluído com sucesso! 😄", {
+        className: "toast",
+        draggable: false,
+        transition: Zoom,
+      });
     } catch (error) {
-      console.log(error);
+      toast.error("Opa, parece que algo deu errado. Tente novamente. 😥", {
+        className: "toast",
+        draggable: false,
+        transition: Zoom,
+        autoClose: 4000,
+      });
     }
   }
 
