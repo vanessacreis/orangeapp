@@ -7,6 +7,8 @@ export const CardBox = styled.div`
   transition: height 5s;
   padding: 2rem;
   border-radius: 1rem;
+  margin: 1rem;
+  margin-top: 0rem;
   box-shadow: 2px 2px 10px ${light.gray}80;
 
   > div {
@@ -42,14 +44,27 @@ export const Details = styled.details`
     margin-block: 1rem;
   }
 
-  .createdAt {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+  .edit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  > button {
-    border: none;
-    background-color: transparent;
-    margin-right: 1.5rem;
+    .createdAt {
+      font-size: 1.2rem;
+    }
+
+    .iconBtn {
+      align-self: flex-end;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin-right: 1.5rem;
+      cursor: pointer;
+
+      > img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 `;
