@@ -65,9 +65,14 @@ export const User = styled.div`
   align-items: center;
   justify-content: center;
 
-  .user {
+  .btn-primary {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 18rem;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 
     > h3 {
       font-family: ${light.fontTitle};
@@ -75,9 +80,10 @@ export const User = styled.div`
       font-weight: 300;
       margin-right: 1rem;
     }
+
     > img {
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 3.8rem;
+      height: 3.8rem;
       border-radius: 100rem;
     }
   }
