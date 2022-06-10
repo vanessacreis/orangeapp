@@ -5,8 +5,10 @@
 
 ## 💻 Sobre o Projeto
 
-Orange APP é uma aplicação de gerenciamento de agendamento.
+Orange APP é uma aplicação de gerenciamento de agendamento desenvolvido em React.
 Para a realização do projeto, foi desenvolvida uma <a href="https://orangeapirest.herokuapp.com/">API</a> utilizando JSON-server.
+
+- [Deploy na Vercel](https://orangeapp.vercel.app/)
 
  <img alt="" src="./src/assets/readme/tela-inicial.png">
 
@@ -115,6 +117,7 @@ Senha: coffee123
 - [Heroku](heroku.com)
 - [Storyset](https://storyset.com/)
 - [Unsplash](https://unsplash.com/)
+- [Vercel](https://vercel.com/)
 
 ---
 
