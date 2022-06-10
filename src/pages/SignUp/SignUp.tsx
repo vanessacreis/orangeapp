@@ -22,7 +22,6 @@ const SignUp = () => {
 
   return (
     <>
-      <Background />
       <S.Container>
         <aside>
           <img src={routineImg} alt="" />
