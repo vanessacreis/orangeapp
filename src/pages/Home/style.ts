@@ -56,3 +56,24 @@ export const Home = styled.section`
     }
   }
 `;
+
+export const Sobre = styled.section`
+  height: 70%;
+  margin-block: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .infoImg {
+    width: 35rem;
+    filter: drop-shadow(2px 2px 5px ${light.gray}80);
+  }
+
+  .infoText {
+    width: 35rem;
+    font-family: ${light.text};
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+`;
