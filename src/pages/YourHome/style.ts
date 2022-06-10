@@ -34,12 +34,25 @@ export const Schedules = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2.5rem;
 
     > h2 {
       color: ${light.primary};
       font-size: 2.5rem;
       font-family: ${light.fontTitle};
       font-weight: 300;
+    }
+  }
+
+  .search {
+    width: 50rem;
+    border: none;
+    background-color: ${light.modal};
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    &:focus {
+      outline: 1.5px solid ${light.primary};
     }
   }
 `;
@@ -49,6 +62,7 @@ export const CardList = styled.div`
   width: 55rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   margin-top: 4rem;
   overflow-y: auto;
@@ -63,5 +77,20 @@ export const CardList = styled.div`
   ::-webkit-scrollbar-thumb {
     background: ${light.secundary};
     border-radius: 5px;
+  }
+
+  .empty {
+    text-align: center;
+
+    > p {
+      width: 28rem;
+      font-size: 2rem;
+    }
+
+    > img {
+      margin-top: 3rem;
+      width: 10rem;
+      height: 10rem;
+    }
   }
 `;
