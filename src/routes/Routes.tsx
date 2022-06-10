@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
 import YourHome from "../pages/YourHome/YourHome";
 import Error from "../pages/Error/Error";
