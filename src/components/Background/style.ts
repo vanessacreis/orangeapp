@@ -2,28 +2,21 @@ import styled from "styled-components";
 import { light } from "../../style/theme";
 
 export const Background = styled.ul`
-  /* background: ${light.background};
-  width: 100%;
-  height: calc(100vh - 7.5rem);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;*/
   overflow: hidden;
   width: 100%;
   height: 100%;
-  max-height: 100vh;
+  max-height: 110vh;
 
   li {
-    position: absolute;
-    display: block;
-    list-style: none;
     width: 20px;
     height: 20px;
     background: ${light.secundary};
-    animation: animate 25s linear infinite;
-    bottom: -150px;
+    border-radius: 1rem;
+    display: block;
+    position: absolute;
+    list-style: none;
+    animation: animate 20s infinite linear;
+    bottom: -40px;
     z-index: -1;
   }
 
@@ -32,6 +25,7 @@ export const Background = styled.ul`
     width: 80px;
     height: 80px;
     animation-delay: 0s;
+    opacity: 0;
   }
 
   li:nth-child(2) {
@@ -40,6 +34,7 @@ export const Background = styled.ul`
     height: 20px;
     animation-delay: 2s;
     animation-duration: 12s;
+    opacity: 0;
   }
 
   li:nth-child(3) {
@@ -47,6 +42,7 @@ export const Background = styled.ul`
     width: 20px;
     height: 20px;
     animation-delay: 4s;
+    opacity: 0;
   }
 
   li:nth-child(4) {
@@ -55,6 +51,7 @@ export const Background = styled.ul`
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s;
+    opacity: 0;
   }
 
   li:nth-child(5) {
@@ -62,6 +59,7 @@ export const Background = styled.ul`
     width: 20px;
     height: 20px;
     animation-delay: 0s;
+    opacity: 0;
   }
 
   li:nth-child(6) {
@@ -69,6 +67,7 @@ export const Background = styled.ul`
     width: 110px;
     height: 110px;
     animation-delay: 3s;
+    opacity: 0;
   }
 
   li:nth-child(7) {
@@ -76,6 +75,7 @@ export const Background = styled.ul`
     width: 150px;
     height: 150px;
     animation-delay: 7s;
+    opacity: 0;
   }
 
   li:nth-child(8) {
@@ -84,6 +84,7 @@ export const Background = styled.ul`
     height: 25px;
     animation-delay: 15s;
     animation-duration: 45s;
+    opacity: 0;
   }
 
   li:nth-child(9) {
@@ -92,6 +93,7 @@ export const Background = styled.ul`
     height: 15px;
     animation-delay: 2s;
     animation-duration: 35s;
+    opacity: 0;
   }
 
   li:nth-child(10) {
@@ -100,6 +102,7 @@ export const Background = styled.ul`
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
+    opacity: 0;
   }
 
   li:nth-child(11) {
@@ -108,6 +111,7 @@ export const Background = styled.ul`
     height: 25px;
     animation-delay: 15s;
     animation-duration: 45s;
+    opacity: 0;
   }
 
   li:nth-child(12) {
@@ -116,6 +120,7 @@ export const Background = styled.ul`
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s;
+    opacity: 0;
   }
 
   li:nth-child(13) {
@@ -123,19 +128,20 @@ export const Background = styled.ul`
     width: 110px;
     height: 110px;
     animation-delay: 3s;
+    opacity: 0;
   }
 
   @keyframes animate {
-    0% {
+    from {
       transform: translateY(0) rotate(0deg);
-      opacity: 1;
-      border-radius: 0;
     }
 
-    100% {
-      transform: translateY(-80vh) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+    50% {
+      opacity: 0.5;
+    }
+
+    to {
+      transform: translateY(-500px) rotate(720deg);
     }
   }
 `;
