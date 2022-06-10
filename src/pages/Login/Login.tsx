@@ -5,6 +5,10 @@ import Button from "../../components/Button/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppointments } from "../../hooks/useAppointments";
+import { ToastContainer } from "react-toastify";
+import { toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "animate.css/animate.min.css";
 
 const Login = () => {
   const [user, setUser] = useState("");
@@ -13,15 +17,31 @@ const Login = () => {
 
   async function handleLogin(e: any) {
     e.preventDefault();
-    context?.actions?.handleLogin(user, password);
+    const checkUser = user.trim();
+    const checkPassword = password.trim();
+    if (checkUser.length > 0 && checkPassword.length > 0) {
+      context?.actions?.handleLogin(user, password);
+    } else {
+      toast.error("Opa! 😥 Parece que os campos estão vazios.", {
+        className: "toast",
+        draggable: false,
+        transition: Zoom,
+        autoClose: 4000,
+      });
+    }
   }
 
   return (
     <S.Container>
       <aside>
-        <img src={eventsImg} alt="" />
+        <img
+          className="animate__animated animate__fadeInLeft"
+          src={eventsImg}
+          alt=""
+        />
       </aside>
-      <S.Login>
+      <S.Login className="animate__animated animate__fadeInRight">
+        <ToastContainer />
         <h1>Login</h1>
         <form>
           <Input
@@ -29,6 +49,7 @@ const Login = () => {
             textLabel="Usuário"
             type="text"
             placeholder="Digite seu nome de usuário"
+            required
             value={user}
             onChange={(e) => setUser(e.target.value)}
           />
@@ -37,6 +58,7 @@ const Login = () => {
             textLabel="Senha"
             type="password"
             placeholder="Digite sua senha"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
