@@ -1,14 +1,20 @@
 export type TAppointment = {
-  id: number;
-  uuid: string;
+  id?: number;
+  uuid?: string;
   title: string;
   description: string;
   createdAt: string;
-  startDay: string;
-  startTime: string;
-  endDay: string;
-  endTime: string;
+  start: {
+    day: string;
+    time: string;
+  };
+  end: {
+    day: string;
+    time: string;
+  };
 };
+
+export type TAppointmentArray = TAppointment[];
 
 export type TUser = {
   uuid: string;
