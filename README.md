@@ -8,7 +8,7 @@
 Orange APP é uma aplicação de gerenciamento de agendamento.
 Para a realização do projeto, foi desenvolvida uma <a href="https://orangeapirest.herokuapp.com/">API</a> utilizando JSON-server.
 
- <img alt="" src="./src/assets/readme/tela-inicial.png" width="400px">
+ <img alt="" src="./src/assets/readme/tela-inicial.png">
 
 ---
 
@@ -20,12 +20,13 @@ Para a realização do projeto, foi desenvolvida uma <a href="https://orangeapir
 - [Inicando o projeto](#🏁-iniciando-o-projeto)
 - [Sobre a API](#🗂️-sobre-a-api)
 - [Tecnologias utilizadas](#🧰-tecnologias-utilizadas)
-    - [Ferramentas](#ferramentas)
-    - [Bibliotecas externas](#📦bibliotecas-externas)
-    - [Utilitários](#utilitários)
+  - [Ferramentas](#ferramentas)
+  - [Bibliotecas externas](#📦bibliotecas-externas)
+  - [Utilitários](#utilitários)
 - [Autora](#👽-autora)
+
 ---
- 
+
 ## ⚙️ Funcionalidades
 
 - [x] Página institucional
@@ -37,8 +38,7 @@ Para a realização do projeto, foi desenvolvida uma <a href="https://orangeapir
     - [x] Editar
     - [x] Excluir
 
- <img alt="" src="./src/assets/readme/tela-do-usuário.png" width="400px">
----
+## <img alt="" src="./src/assets/readme/tela-do-usuário.png">
 
 ## 🏁 Iniciando o projeto
 
@@ -73,7 +73,9 @@ Acesse http://localhost:3000/
 ```
 
 ---
+
 ## 🗂️ Sobre a API
+
 A <a href="https://orangeapirest.herokuapp.com/">API</a> desenvolvida já conta com um perfil criado e com alguns agendamentos adicionados. Para utilizá-lo, faça login com as informações abaixo:
 
 ```
@@ -115,6 +117,7 @@ Senha: coffee123
 - [Unsplash](https://unsplash.com/)
 
 ---
+
 ## 👽 Autora
 
 ### Desenvolvido com 🧡 por <a href="https://www.linkedin.com/in/vanessacreisbh/">Vanessa Reis</a>.
