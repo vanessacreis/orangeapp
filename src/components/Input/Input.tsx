@@ -1,10 +1,10 @@
 import { InputHTMLAttributes } from "react";
 import * as S from "./style";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>  {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   width: number;
-  textLabel: string;
-};
+  textLabel?: string;
+}
 
 const Input = ({ width, textLabel, ...props }: InputProps) => {
   return (

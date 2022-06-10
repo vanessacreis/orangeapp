@@ -14,9 +14,8 @@ export const Box = styled.div`
 `;
 
 export const Input = styled.input`
-  height: 4.2rem;
+  height: 4rem;
   background-color: ${light.tertiary};
-
   font-family: ${light.font};
   font-size: 1.6rem;
   border: none;
