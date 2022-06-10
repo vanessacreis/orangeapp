@@ -1,10 +1,11 @@
 import editImg from "../../assets/images/edit-icon.svg";
-import deleteImg from "../../assets/images/delete-icon.svg";
 import { TAppointment } from "../../types/types";
 import * as S from "./style";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
 import { api } from "../../services/api";
+import { toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type TCardProps = {
   appointment: TAppointment;
@@ -23,8 +24,20 @@ const Card = ({ appointment, buttonDelete }: TCardProps) => {
         `/appointments/${appointment.id}`,
         appointment
       );
+      if (response.status === 200) {
+        toast.success("Agendamento editado com sucesso! 😄", {
+          className: "toast",
+          draggable: false,
+          transition: Zoom,
+        });
+      }
     } catch (error) {
-      throw new Error("Não rolou");
+      toast.error("Opa, parece que algo deu errado. Tente novamente. 😥", {
+        className: "toast",
+        draggable: false,
+        transition: Zoom,
+        autoClose: 4000,
+      });
     }
   }
 
